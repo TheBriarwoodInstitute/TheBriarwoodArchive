@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic Home Page - The Briarwood Institute</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: black;
+            color: red;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header-image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header-image img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .welcome-message {
+            text-align: center;
+        }
+
+        .nav-buttons {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav-button {
+            margin-bottom: 10px;
+            font-family: 'Courier New', monospace;
+            background-color: red;
+            color: black;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="nav-buttons">
+            <button class="nav-button" onclick="window.location.href = 'employee_files.html'">Employee Files</button>
+            <button class="nav-button" onclick="window.location.href = 'entity_archive.html'">Entity Archive</button>
+            <button class="nav-button" onclick="window.location.href = 'video_archive.html'">Video Archive</button>
+        </div>
+
+        <div class="header-image">
+            <img src="Briarwood.png" alt="Briarwood Institute">
+        </div>
+
+        <div class="welcome-message">
+            <h1>Welcome to the Briarwood System</h1>
+        </div>
+
+    </div>
+</body>
+
+</html>

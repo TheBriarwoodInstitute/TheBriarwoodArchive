@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Briarwood Institute</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: black;
+            color: red;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .login-form {
+            border: 2px solid red;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .login-form label,
+        .login-form input {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .login-form input[type="submit"] {
+            background-color: red;
+            color: black;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        .header-image {
+            text-align: center;
+        }
+
+        .header-image img {
+            width: 100%;
+            max-height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header-image">
+            <img src="Briarwood.png" alt="Briarwood Institute">
+        </div>
+
+
+        <div class="login-form">
+            <form id="fake-login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('fake-login-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const username = event.target.username.value;
+            const password = event.target.password.value;
+
+            // Fake login validation for all valid logins
+            if ((username === 'ICadigan' && password === 'CaptainCadigan28') ||
+                (username === 'JDalton' && password === 'DaltonCA29') ||
+                (username === 'LOConnor' && password === 'Texpert') ||
+                (username === 'EBennett' && password === 'MedDoc') ||
+                (username === 'FSinclair' && password === 'SpiderClimb')) {
+                window.location.href = 'basic_home_page.html'; // Replace 'basic_home_page.html' with the desired home page filename
+            } else {
+                alert('Invalid username or password. Please try again.');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
